@@ -50,6 +50,9 @@ namespace Calculator
             this.btdiv = new System.Windows.Forms.Button();
             this.txtb1 = new System.Windows.Forms.TextBox();
             this.IGUAL = new System.Windows.Forms.Button();
+            this.btraiz = new System.Windows.Forms.Button();
+            this.btdelete = new System.Windows.Forms.Button();
+            this.btidioma = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bt7
@@ -180,7 +183,7 @@ namespace Calculator
             this.btpow.TabIndex = 12;
             this.btpow.Text = "n^";
             this.btpow.UseVisualStyleBackColor = true;
-            this.btpow.Click += new System.EventHandler(this.btcoma_Click);
+            this.btpow.Click += new System.EventHandler(this.btpow_Click);
             // 
             // btnulo
             // 
@@ -221,7 +224,7 @@ namespace Calculator
             // 
             // IGUAL
             // 
-            this.IGUAL.Location = new System.Drawing.Point(132, 258);
+            this.IGUAL.Location = new System.Drawing.Point(255, 258);
             this.IGUAL.Name = "IGUAL";
             this.IGUAL.Size = new System.Drawing.Size(75, 23);
             this.IGUAL.TabIndex = 22;
@@ -229,11 +232,44 @@ namespace Calculator
             this.IGUAL.UseVisualStyleBackColor = true;
             this.IGUAL.Click += new System.EventHandler(this.IGUAL_Click);
             // 
+            // btraiz
+            // 
+            this.btraiz.Location = new System.Drawing.Point(93, 258);
+            this.btraiz.Name = "btraiz";
+            this.btraiz.Size = new System.Drawing.Size(75, 23);
+            this.btraiz.TabIndex = 23;
+            this.btraiz.Text = "√";
+            this.btraiz.UseVisualStyleBackColor = true;
+            this.btraiz.Click += new System.EventHandler(this.btraiz_Click);
+            // 
+            // btdelete
+            // 
+            this.btdelete.Location = new System.Drawing.Point(174, 258);
+            this.btdelete.Name = "btdelete";
+            this.btdelete.Size = new System.Drawing.Size(75, 23);
+            this.btdelete.TabIndex = 24;
+            this.btdelete.Text = "Delete";
+            this.btdelete.UseVisualStyleBackColor = true;
+            this.btdelete.Click += new System.EventHandler(this.btdelete_Click);
+            // 
+            // btidioma
+            // 
+            this.btidioma.Location = new System.Drawing.Point(12, 258);
+            this.btidioma.Name = "btidioma";
+            this.btidioma.Size = new System.Drawing.Size(75, 23);
+            this.btidioma.TabIndex = 25;
+            this.btidioma.Text = "EN";
+            this.btidioma.UseVisualStyleBackColor = true;
+            this.btidioma.Click += new System.EventHandler(this.btidioma_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(340, 494);
+            this.Controls.Add(this.btidioma);
+            this.Controls.Add(this.btdelete);
+            this.Controls.Add(this.btraiz);
             this.Controls.Add(this.IGUAL);
             this.Controls.Add(this.txtb1);
             this.Controls.Add(this.btdiv);
@@ -279,6 +315,9 @@ namespace Calculator
         private System.Windows.Forms.Button btdiv;
         private System.Windows.Forms.TextBox txtb1;
         private System.Windows.Forms.Button IGUAL;
+        private System.Windows.Forms.Button btraiz;
+        private System.Windows.Forms.Button btdelete;
+        private System.Windows.Forms.Button btidioma;
     }
 }
 
