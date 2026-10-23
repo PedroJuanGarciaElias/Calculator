@@ -9,95 +9,153 @@ namespace Calculator
     {
         private string texto;
         private bool ES = false;
+        private bool error = false;
+        private Timer parpadear;
+        private int contador = 0;
         public Form1()
         {
             InitializeComponent();
-            txtb1.ReadOnly = true;
+            txtb1.ReadOnly = true; //El cuadro de texto es de solo lectura.
             CambiarIdioma();
+            txtb1.GotFocus += Txtb1_GotFocus; //Se le asigna al Form.
+
+            parpadear = new Timer();
+            parpadear.Interval = 250;
+            parpadear.Tick += parpadear_Tick;
+        }
+
+        private void parpadear_Tick(object sender, EventArgs e)
+        {
+            if (contador < 4)
+            {
+                if (contador % 2 == 0)
+                {
+                    txtb1.BackColor = System.Drawing.Color.Red;
+                    txtb1.ForeColor = System.Drawing.Color.White;
+                } else
+                {
+                    txtb1.BackColor = System.Drawing.Color.White;
+                    txtb1.ForeColor = System.Drawing.Color.Black;
+                }
+
+                contador++;
+                txtb1.Refresh(); //Refresca el cuadro de texto.
+            } else
+            {
+                parpadear.Stop();
+                txtb1.BackColor = System.Drawing.Color.Red;
+                txtb1.ForeColor = System.Drawing.Color.White;
+                txtb1.Refresh();
+            }
+        }
+
+        private void Txtb1_GotFocus(object sender, EventArgs e)
+        {
+            ActiveControl = null; //Evita que el cursor se pueda poner dentro del cuadro de texto.
         }
 
         private void bt7_Click(object sender, EventArgs e)
         {
+            if (error) return; //De esta manera se bloquea el botón para que no escriba en el cuadro de texto cuando dé un error.
             txtb1.Text += "7";
         }
 
         private void bt8_Click(object sender, EventArgs e)
         {
+            if (error) return;
+            {
+                
+            }
             txtb1.Text += "8";
         }
 
         private void bt9_Click(object sender, EventArgs e)
         {
+            if (error) return;
             txtb1.Text += "9";
         }
 
         private void btmulti_Click(object sender, EventArgs e)
         {
+            if (error) return;
             txtb1.Text += "x";
         }
 
         private void bt4_Click(object sender, EventArgs e)
         {
+            if (error) return;
             txtb1.Text += "4";
         }
 
         private void bt5_Click(object sender, EventArgs e)
         {
+            if (error) return;
             txtb1.Text += "5";
         }
 
         private void bt6_Click(object sender, EventArgs e)
         {
+            if (error) return;
             txtb1.Text += "6";
         }
 
         private void btresta_Click(object sender, EventArgs e)
         {
+            if (error) return;
             txtb1.Text += "-";
         }
 
         private void bt1_Click(object sender, EventArgs e)
         {
+            if (error) return;
             txtb1.Text += "1";
         }
 
         private void bt2_Click(object sender, EventArgs e)
         {
+            if (error) return;
             txtb1.Text += "2";
         }
 
         private void bt3_Click(object sender, EventArgs e)
         {
+            if (error) return;
             txtb1.Text += "3";
         }
 
         private void btsum_Click(object sender, EventArgs e)
         {
+            if (error) return;
             txtb1.Text += "+";
         }
 
         private void btpow_Click(object sender, EventArgs e)
         {
+            if (error) return;
             txtb1.Text += "^";
         }
 
         private void btnulo_Click(object sender, EventArgs e)
         {
+            if (error) return;
             txtb1.Text += 0;
         }
 
         private void btcoma_Click(object sender, EventArgs e)
         {
+            if (error) return;
             txtb1.Text += ES ? "," : "."; //Alterna entre coma y punto según el idioma.
         }
 
         private void btdiv_Click(Object sender, EventArgs e)
         {
+            if (error) return;
             txtb1.Text += "/";
         }
 
         private void btidioma_Click(object sender, EventArgs e)
         {
+            if (error) return;
             ES = !ES;
             CambiarIdioma();
             txtb1.Clear();
@@ -123,11 +181,14 @@ namespace Calculator
 
         private void btraiz_Click(object sender, EventArgs e)
         {
+            if (error) return;
             txtb1.Text += "√";
         }
 
         private void btdelete_Click(object sender, EventArgs e)
         {
+            if (error) return;
+
             if (txtb1.Text.Length > 0)
             {
                 txtb1.Text = txtb1.Text.Substring(0, txtb1.Text.Length - 1);
@@ -136,6 +197,8 @@ namespace Calculator
 
         private void IGUAL_Click(object sender, EventArgs e)
         {
+            if (error) return;
+
             texto = txtb1.Text;
             try
             {
@@ -212,6 +275,11 @@ namespace Calculator
             {
                 txtb1.Text = "ERROR";
                 texto = "";
+
+                error = true;
+                contador = 0;
+
+                parpadear.Start();
             }
 
         }

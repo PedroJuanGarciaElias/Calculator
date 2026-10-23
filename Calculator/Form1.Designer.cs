@@ -57,7 +57,7 @@ namespace Calculator
             // 
             // bt7
             // 
-            this.bt7.Location = new System.Drawing.Point(12, 142);
+            this.bt7.Location = new System.Drawing.Point(12, 161);
             this.bt7.Name = "bt7";
             this.bt7.Size = new System.Drawing.Size(75, 23);
             this.bt7.TabIndex = 0;
@@ -67,7 +67,7 @@ namespace Calculator
             // 
             // bt8
             // 
-            this.bt8.Location = new System.Drawing.Point(93, 142);
+            this.bt8.Location = new System.Drawing.Point(93, 161);
             this.bt8.Name = "bt8";
             this.bt8.Size = new System.Drawing.Size(75, 23);
             this.bt8.TabIndex = 1;
@@ -77,7 +77,7 @@ namespace Calculator
             // 
             // bt9
             // 
-            this.bt9.Location = new System.Drawing.Point(174, 142);
+            this.bt9.Location = new System.Drawing.Point(174, 161);
             this.bt9.Name = "bt9";
             this.bt9.Size = new System.Drawing.Size(75, 23);
             this.bt9.TabIndex = 2;
@@ -87,7 +87,7 @@ namespace Calculator
             // 
             // btmulti
             // 
-            this.btmulti.Location = new System.Drawing.Point(255, 142);
+            this.btmulti.Location = new System.Drawing.Point(255, 161);
             this.btmulti.Name = "btmulti";
             this.btmulti.Size = new System.Drawing.Size(75, 23);
             this.btmulti.TabIndex = 3;
@@ -97,7 +97,7 @@ namespace Calculator
             // 
             // bt4
             // 
-            this.bt4.Location = new System.Drawing.Point(12, 171);
+            this.bt4.Location = new System.Drawing.Point(12, 190);
             this.bt4.Name = "bt4";
             this.bt4.Size = new System.Drawing.Size(75, 23);
             this.bt4.TabIndex = 4;
@@ -107,7 +107,7 @@ namespace Calculator
             // 
             // bt5
             // 
-            this.bt5.Location = new System.Drawing.Point(93, 171);
+            this.bt5.Location = new System.Drawing.Point(93, 190);
             this.bt5.Name = "bt5";
             this.bt5.Size = new System.Drawing.Size(75, 23);
             this.bt5.TabIndex = 5;
@@ -117,7 +117,7 @@ namespace Calculator
             // 
             // bt6
             // 
-            this.bt6.Location = new System.Drawing.Point(174, 171);
+            this.bt6.Location = new System.Drawing.Point(174, 190);
             this.bt6.Name = "bt6";
             this.bt6.Size = new System.Drawing.Size(75, 23);
             this.bt6.TabIndex = 6;
@@ -127,7 +127,7 @@ namespace Calculator
             // 
             // btresta
             // 
-            this.btresta.Location = new System.Drawing.Point(255, 171);
+            this.btresta.Location = new System.Drawing.Point(255, 190);
             this.btresta.Name = "btresta";
             this.btresta.Size = new System.Drawing.Size(75, 23);
             this.btresta.TabIndex = 7;
@@ -137,7 +137,7 @@ namespace Calculator
             // 
             // bt1
             // 
-            this.bt1.Location = new System.Drawing.Point(12, 200);
+            this.bt1.Location = new System.Drawing.Point(12, 219);
             this.bt1.Name = "bt1";
             this.bt1.Size = new System.Drawing.Size(75, 23);
             this.bt1.TabIndex = 8;
@@ -147,7 +147,7 @@ namespace Calculator
             // 
             // bt2
             // 
-            this.bt2.Location = new System.Drawing.Point(93, 200);
+            this.bt2.Location = new System.Drawing.Point(93, 219);
             this.bt2.Name = "bt2";
             this.bt2.Size = new System.Drawing.Size(75, 23);
             this.bt2.TabIndex = 9;
@@ -157,7 +157,7 @@ namespace Calculator
             // 
             // bt3
             // 
-            this.bt3.Location = new System.Drawing.Point(174, 200);
+            this.bt3.Location = new System.Drawing.Point(174, 219);
             this.bt3.Name = "bt3";
             this.bt3.Size = new System.Drawing.Size(75, 23);
             this.bt3.TabIndex = 10;
@@ -167,7 +167,7 @@ namespace Calculator
             // 
             // btsum
             // 
-            this.btsum.Location = new System.Drawing.Point(255, 200);
+            this.btsum.Location = new System.Drawing.Point(255, 219);
             this.btsum.Name = "btsum";
             this.btsum.Size = new System.Drawing.Size(75, 23);
             this.btsum.TabIndex = 11;
@@ -177,7 +177,7 @@ namespace Calculator
             // 
             // btpow
             // 
-            this.btpow.Location = new System.Drawing.Point(12, 229);
+            this.btpow.Location = new System.Drawing.Point(12, 248);
             this.btpow.Name = "btpow";
             this.btpow.Size = new System.Drawing.Size(75, 23);
             this.btpow.TabIndex = 12;
@@ -187,7 +187,7 @@ namespace Calculator
             // 
             // btnulo
             // 
-            this.btnulo.Location = new System.Drawing.Point(93, 229);
+            this.btnulo.Location = new System.Drawing.Point(93, 248);
             this.btnulo.Name = "btnulo";
             this.btnulo.Size = new System.Drawing.Size(75, 23);
             this.btnulo.TabIndex = 13;
@@ -197,7 +197,7 @@ namespace Calculator
             // 
             // btcoma
             // 
-            this.btcoma.Location = new System.Drawing.Point(174, 229);
+            this.btcoma.Location = new System.Drawing.Point(174, 248);
             this.btcoma.Name = "btcoma";
             this.btcoma.Size = new System.Drawing.Size(75, 23);
             this.btcoma.TabIndex = 14;
@@ -207,7 +207,7 @@ namespace Calculator
             // 
             // btdiv
             // 
-            this.btdiv.Location = new System.Drawing.Point(255, 229);
+            this.btdiv.Location = new System.Drawing.Point(255, 248);
             this.btdiv.Name = "btdiv";
             this.btdiv.Size = new System.Drawing.Size(75, 23);
             this.btdiv.TabIndex = 15;
@@ -217,14 +217,16 @@ namespace Calculator
             // 
             // txtb1
             // 
-            this.txtb1.Location = new System.Drawing.Point(12, 116);
+            this.txtb1.BackColor = System.Drawing.SystemColors.Window;
+            this.txtb1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtb1.Location = new System.Drawing.Point(10, 104);
             this.txtb1.Name = "txtb1";
             this.txtb1.Size = new System.Drawing.Size(318, 20);
             this.txtb1.TabIndex = 21;
             // 
             // IGUAL
             // 
-            this.IGUAL.Location = new System.Drawing.Point(255, 258);
+            this.IGUAL.Location = new System.Drawing.Point(255, 277);
             this.IGUAL.Name = "IGUAL";
             this.IGUAL.Size = new System.Drawing.Size(75, 23);
             this.IGUAL.TabIndex = 22;
@@ -234,7 +236,7 @@ namespace Calculator
             // 
             // btraiz
             // 
-            this.btraiz.Location = new System.Drawing.Point(93, 258);
+            this.btraiz.Location = new System.Drawing.Point(93, 277);
             this.btraiz.Name = "btraiz";
             this.btraiz.Size = new System.Drawing.Size(75, 23);
             this.btraiz.TabIndex = 23;
@@ -244,7 +246,7 @@ namespace Calculator
             // 
             // btdelete
             // 
-            this.btdelete.Location = new System.Drawing.Point(174, 258);
+            this.btdelete.Location = new System.Drawing.Point(174, 277);
             this.btdelete.Name = "btdelete";
             this.btdelete.Size = new System.Drawing.Size(75, 23);
             this.btdelete.TabIndex = 24;
@@ -254,7 +256,7 @@ namespace Calculator
             // 
             // btidioma
             // 
-            this.btidioma.Location = new System.Drawing.Point(12, 258);
+            this.btidioma.Location = new System.Drawing.Point(12, 277);
             this.btidioma.Name = "btidioma";
             this.btidioma.Size = new System.Drawing.Size(75, 23);
             this.btidioma.TabIndex = 25;
